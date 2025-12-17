@@ -4,47 +4,17 @@
 
 <robot name="gripperbot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <!-- UNCOMMENT WHEN NEEDED >>> <xacro:arg name="using_sim" default="true" /> -->
+    <xacro:arg name="sim_not_real" default="false" /> 
 
     <xacro:include filename="modules/arm.xacro" />
     <xacro:include filename="modules/gripper.xacro" />
-
-
-    <!-- GOOD PRACTICE TO PUT THE JOINTS BETWEEN ARM AND GRIPPER HERE-->
-    <!-- Joint from wrist3_tool_link to gripper_body_link -->
-    <joint name="gripper_to_arm_joint" type="continuous">
-        <origin xyz="-4.34174e-15 -0.0145 0.028" rpy="-1.5708 -1.5708 0"/>
-        <parent link="wrist3_tool_link"/>
-        <child link="gripper_body_link"/>
-        <axis xyz="0 0 1"/>
-        <limit effort="100" velocity="100"/>
-    </joint>
-
-
-    <!-- UNCOMMENT WHEN NEEDED >>> 
-    <xacro:if value="$(arg using_sim)">
-        <xacro:include filename="modules/ros2_control_sim.xacro" />
-    </xacro:if>
-
-    <xacro:unless value="$(arg using_sim)">
-        <xacro:include filename="modules/ros2_control.xacro" />
-    </xacro:unless>
-    -->
-
-    <!-- ... inside the launch file we then use commands such as this ...
     
-    xacro_file = os.path.join(get_package_share_directory('slambot_description'), 'urdf', 'slambot.urdf.xacro')
-    
-    robot_description_config = Command(['xacro ', xacro_file, ' using_sim:=false'])
-    
-    params = {'robot_description': robot_description_config}
-    
-    node_robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        parameters=[params]
-    )
-    ... -->
+
+   <!-- <xacro:if value="$(arg sim_not_real)">
+    </xacro:if> -->
  
+    <!-- <xacro:unless value="$(arg sim_not_real)">
+    </xacro:unless> -->
+
 </robot>
+

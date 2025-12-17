@@ -217,6 +217,16 @@
 
 <!-- =======================================  JOINTS ============================================= -->
 
+
+  <!-- Joint from wrist3_tool_link to gripper_body_link -->
+  <joint name="gripper_to_arm_joint" type="continuous">
+      <origin xyz="-4.34174e-15 -0.0145 0.028" rpy="-1.5708 -1.5708 0"/>
+      <parent link="wrist3_tool_link"/>
+      <child link="gripper_body_link"/>
+      <axis xyz="0 0 1"/>
+      <limit effort="100" velocity="100"/>
+  </joint>
+
  <!-- Joint from wrist2_link to wrist3_tool_link -->
   <joint name="wrist2_joint" type="revolute">
     <origin xyz="0.01375 2.45572e-17 0.028" rpy="-1.5708 7.43214e-16 -1.5708"/>
