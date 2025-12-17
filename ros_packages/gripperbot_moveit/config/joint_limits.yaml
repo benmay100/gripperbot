@@ -1,0 +1,55 @@
+# joint_limits.yaml allows the dynamics properties specified in the URDF to be overwritten or augmented as needed
+
+# For beginners, we downscale velocity and acceleration limits.
+# You can always specify higher scaling factors (<= 1.0) in your motion requests.  # Increase the values below to 1.0 to always move at maximum speed.
+default_velocity_scaling_factor: 1.0 # Was 0.1, changed to 1.0 (Ben May)
+default_acceleration_scaling_factor: 1.0 # Was 0.1, changed to 1.0 (Ben May)
+
+# Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
+# Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
+joint_limits:
+  arm1_to_gripperbody_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  arm2_to_gripperbody_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  arm3_to_gripperbody_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  elbow_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  gripper_to_arm_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  shoulder_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  waist_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  wrist1_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)
+  wrist2_joint:
+    has_velocity_limits: true
+    max_velocity: 1.0 # Was 100, changed to 1.0 (needs to be a double, not an integer and 100 too much anyway) (Ben May)
+    has_acceleration_limits: true # Changed to true (Ben May)
+    max_acceleration: 1.0 # Was 0, changed to 1.0 (needs to be a double, not an integer and 0 not useful anyway) (Ben May)

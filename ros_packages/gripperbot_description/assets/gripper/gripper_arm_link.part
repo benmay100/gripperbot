@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "862e8c6c3191e2050c2f0c77",
+    "documentMicroversion": "884c5a7cec90ad710f57301e",
+    "elementId": "2df71edd855c5cb3a8432d7e",
+    "fullConfiguration": "default",
+    "id": "MLdzaIOQWfz+mgi1E",
+    "isStandardContent": false,
+    "name": "gripper_arm_link <3>",
+    "partId": "R7FH",
+    "suppressed": false,
+    "type": "Part"
+}

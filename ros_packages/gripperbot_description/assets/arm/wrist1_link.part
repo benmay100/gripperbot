@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "862e8c6c3191e2050c2f0c77",
+    "documentMicroversion": "c5ca7feace0c94e4750d763f",
+    "elementId": "f5c72fa5b049cf39e67bf8a1",
+    "fullConfiguration": "default",
+    "id": "MI8GddiUF1U/2/7ZE",
+    "isStandardContent": false,
+    "name": "wrist1_link <1>",
+    "partId": "RpDD",
+    "suppressed": false,
+    "type": "Part"
+}

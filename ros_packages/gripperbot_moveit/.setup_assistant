@@ -1,0 +1,23 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: gripperbot_description
+    relative_path: urdf/gripperbot.urdf.xacro
+  srdf:
+    relative_path: config/gripperbot.srdf
+  package_settings:
+    author_name: Ben May
+    author_email: benmay@email.com
+    generated_timestamp: 1765972968
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position

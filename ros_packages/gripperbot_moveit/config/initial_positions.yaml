@@ -1,0 +1,10 @@
+# Default initial positions for gripperbot's ros2_control fake system
+
+initial_positions:
+  arm1_to_gripperbody_joint: 0
+  elbow_joint: 0
+  gripper_to_arm_joint: 0
+  shoulder_joint: 0
+  waist_joint: 0
+  wrist1_joint: 0
+  wrist2_joint: 0

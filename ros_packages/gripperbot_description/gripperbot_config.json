@@ -1,0 +1,56 @@
+// Used to export the URDF from Onshape
+
+{
+  "url": "https://cad.onshape.com/documents/862e8c6c3191e2050c2f0c77/w/c0f9f357af393f0842a7b7ce/e/3cefbdc09bab04312f301a3f",
+  "outputFormat": "urdf",
+  "packageName": "gripperbot_description",
+  "robotName": "gripperbot",
+  "export_stl_with_meters": true,
+  "set_zero_mass_to_fixed": false,
+  "default_joint_type": "continuous",
+  "mesh_output_format": "stl",
+  "joint_properties": {
+      "default": {
+          "max_effort": 100,
+          "max_velocity": 100
+      },
+      "dof_waist_joint": { 
+          "type": "continuous"
+      },
+      "dof_shoulder_joint": { 
+          "type": "revolute",
+          "limits": [-0.95, 2.2]
+      },
+      "dof_upperarm_to_elbow_joint": { 
+          "type": "fixed"
+      },
+      "dof_elbow_joint": { 
+          "type": "revolute",
+          "limits": [-3.65, 2.35] 
+      },
+      "dof_forearm_to_wrist_joint": { 
+          "type": "fixed"
+      },
+      "dof_wrist1_joint": { 
+          "type": "continuous"
+      },
+      "dof_wrist2_joint": {
+          "type": "continuous"
+      },
+      "dof_wrist3_joint": {
+          "type": "continuous"
+      },
+      "dof_arm1_to_gripperbody_joint": {
+          "type": "revolute",
+          "limits": [-0.18, 0.611] 
+      },
+      "dof_arm2_to_gripperbody_joint": {
+          "type": "revolute",
+          "limits": [-0.18, 0.611] 
+      },
+      "dof_arm3_to_gripperbody_joint": {
+          "type": "revolute",
+          "limits": [-0.18, 0.611] 
+      }
+  }
+}

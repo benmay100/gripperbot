@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/862e8c6c3191e2050c2f0c77/w/c0f9f357af393f0842a7b7ce/e/4f23dfc971c8123d3ac0b54e -->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+<!-- ======================================= LINKS ============================================ -->
+
+  <!-- Link gripper_body_link -->
+  <link name="gripper_body_link">
+    <inertial>
+      <origin xyz="-4.05275e-10 8.37288e-10 -0.0687623" rpy="0 0 0"/>
+      <mass value="0.125198"/>
+      <inertia ixx="0.00016856" ixy="-6.41053e-13" ixz="-1.50248e-12" iyy="0.00016856" iyz="4.56882e-12" izz="9.25176e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.1361 -0.054" rpy="3.14159 -1.51858e-31 -7.13552e-32"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_body_link.stl"/>
+      </geometry>
+      <material name="gripper_body_link_material">
+        <color rgba="0.654902 0.584314 0.823529 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.1361 -0.054" rpy="3.14159 -1.51858e-31 -7.13552e-32"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_body_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link gripper_body_link -->
+
+
+  <!-- Link gripper_arm_link_1 -->
+  <link name="gripper_arm_link_1">
+    <inertial>
+      <origin xyz="0.0329865 0.0247847 0.003" rpy="0 0 0"/>
+      <mass value="0.00753434"/>
+      <inertia ixx="4.33594e-06" ixy="-2.13713e-06" ixz="3.39419e-15" iyy="1.76823e-06" iyz="1.34526e-14" izz="6.05896e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.004" rpy="-4.80254e-18 -2.92476e-18 5.32903e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+      <material name="gripper_arm_link_1_material">
+        <color rgba="0.294118 0.180392 0.560784 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.004" rpy="-4.80254e-18 -2.92476e-18 5.32903e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link gripper_arm_link_1 -->
+
+
+  <!-- Link gripper_arm_link_2 -->
+  <link name="gripper_arm_link_2">
+    <inertial>
+      <origin xyz="0.0329865 0.0247847 -0.003" rpy="0 0 0"/>
+      <mass value="0.00753434"/>
+      <inertia ixx="4.33594e-06" ixy="-2.13713e-06" ixz="3.39419e-15" iyy="1.76823e-06" iyz="1.34526e-14" izz="6.05896e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -1.11022e-16 -0.01" rpy="6.05967e-17 6.39472e-17 -1.15544e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+      <material name="gripper_arm_link_2_material">
+        <color rgba="0.294118 0.180392 0.560784 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -1.11022e-16 -0.01" rpy="6.05967e-17 6.39472e-17 -1.15544e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link gripper_arm_link_2 -->
+
+
+   <!-- Link gripper_arm_link_3 -->
+  <link name="gripper_arm_link_3">
+    <inertial>
+      <origin xyz="0.0329865 0.0247847 -0.003" rpy="0 0 0"/>
+      <mass value="0.00753434"/>
+      <inertia ixx="4.33594e-06" ixy="-2.13713e-06" ixz="3.39419e-15" iyy="1.76823e-06" iyz="1.34526e-14" izz="6.05896e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="1.11022e-16 0 -0.01" rpy="2.20238e-31 9.78201e-31 -6.16684e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+      <material name="gripper_arm_link_3_material">
+        <color rgba="0.294118 0.180392 0.560784 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="1.11022e-16 0 -0.01" rpy="2.20238e-31 9.78201e-31 -6.16684e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/gripper/gripper_arm_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link gripper_arm_link_3 -->
+
+
+
+<!-- =================================== JOINTS ===================================== -->  
+
+  <!-- Joint from gripper_body_link to gripper_arm_link_1 -->
+  <joint name="arm1_to_gripperbody_joint" type="revolute">
+    <origin xyz="-0.0116776 0.0102062 -0.1085" rpy="-1.5708 0.611 2.61799"/>
+    <parent link="gripper_body_link"/>
+    <child link="gripper_arm_link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-0.791" upper="1.06581e-14"/>
+  </joint>
+
+  <!-- Joint from gripper_body_link to gripper_arm_link_2 -->
+  <joint name="arm2_to_gripperbody_joint" type="revolute">
+    <origin xyz="0.0116776 0.0102062 -0.1085" rpy="-1.5708 0.611 0.523599"/>
+    <parent link="gripper_body_link"/>
+    <child link="gripper_arm_link_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-0.791" upper="0"/>
+    <mimic joint="arm1_to_gripperbody_joint" multiplier="1" offset="0"/>
+  </joint>
+ 
+  <!-- Joint from gripper_body_link to gripper_arm_link_3 -->
+  <joint name="arm3_to_gripperbody_joint" type="revolute">
+    <origin xyz="0.003 -0.0152162 -0.1085" rpy="-1.5708 0.611 -1.5708"/>
+    <parent link="gripper_body_link"/>
+    <child link="gripper_arm_link_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-0.791" upper="0"/>
+    <mimic joint="arm1_to_gripperbody_joint" multiplier="1" offset="0"/>
+  </joint>
+
+
+</robot>

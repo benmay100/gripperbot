@@ -1,0 +1,283 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape document_id: 862e8c6c3191e2050c2f0c77 -->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+<!-- ============================================ LINKS ================================================ -->
+
+ <!-- Link base_link -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="1.14227e-09 -0.0149262 0.0224093" rpy="0 0 0"/>
+      <mass value="8.03176"/>
+      <inertia ixx="0.0250449" ixy="-3.29178e-09" ixz="-4.24446e-10" iyy="0.0142937" iyz="-0.00185524" izz="0.0358871"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/base_link.stl"/>
+      </geometry>
+      <material name="base_link_material">
+        <color rgba="0.764706 0.545098 0.803922 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link base_link -->
+
+
+  <!-- Link shoulder_link -->
+  <link name="shoulder_link">
+    <inertial>
+      <origin xyz="6.41216e-19 -1.66263e-18 -0.0210225" rpy="0 0 0"/>
+      <mass value="0.186823"/>
+      <inertia ixx="5.6668e-05" ixy="8.77202e-21" ixz="3.67806e-24" iyy="5.84165e-05" iyz="1.13905e-23" izz="4.78827e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="3.85186e-34 0 -6.93889e-18" rpy="-3.14159 -3.51796e-20 8.32667e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/shoulder_link.stl"/>
+      </geometry>
+      <material name="shoulder_link_material">
+        <color rgba="0.368627 0.25098 0.643137 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="3.85186e-34 0 -6.93889e-18" rpy="-3.14159 -3.51796e-20 8.32667e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/shoulder_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link shoulder_link -->
+
+
+  <!-- Link upperarm_link -->
+  <link name="upperarm_link">
+    <inertial>
+      <origin xyz="-3.93686e-05 0.101925 0.019" rpy="0 0 0"/>
+      <mass value="0.158267"/>
+      <inertia ixx="0.00150665" ixy="5.68203e-07" ixz="2.2488e-19" iyy="3.55793e-05" iyz="-3.04272e-19" izz="0.00148737"/>
+    </inertial>
+    <visual>
+      <origin xyz="-1.236e-05 0.032 0.019" rpy="-2.19641 -1.57079 0.626"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/upperarm_link.stl"/>
+      </geometry>
+      <material name="upperarm_link_material">
+        <color rgba="0.654902 0.584314 0.823529 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.236e-05 0.032 0.019" rpy="-2.19641 -1.57079 0.626"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/upperarm_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link upperarm_link -->
+
+
+  <!-- Link elbow_link -->
+  <link name="elbow_link">
+    <inertial>
+      <origin xyz="-5.48603e-05 2.19372e-05 -0.0299903" rpy="0 0 0"/>
+      <mass value="0.298533"/>
+      <inertia ixx="0.00014186" ixy="6.3472e-09" ixz="-8.16051e-07" iyy="0.000147003" iyz="2.05859e-07" izz="8.21563e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="8.69633e-19 3.56431e-18 1.66533e-16" rpy="3.14159 2.42999e-17 -2.41063e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/elbow_link.stl"/>
+      </geometry>
+      <material name="elbow_link_material">
+        <color rgba="0.654902 0.584314 0.823529 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="8.69633e-19 3.56431e-18 1.66533e-16" rpy="3.14159 2.42999e-17 -2.41063e-17"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/elbow_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link elbow_link -->
+
+
+  <!-- Link forearm_link -->
+  <link name="forearm_link">
+    <inertial>
+      <origin xyz="8.83279e-17 -0.0729009 0.0208966" rpy="0 0 0"/>
+      <mass value="0.158134"/>
+      <inertia ixx="0.00123935" ixy="-2.79266e-20" ixz="3.4357e-19" iyy="2.32886e-05" iyz="1.84844e-05" izz="0.00123694"/>
+    </inertial>
+    <visual>
+      <origin xyz="8.4622e-17 3.33067e-16 1.76942e-16" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/forearm_link.stl"/>
+      </geometry>
+      <material name="forearm_link_material">
+        <color rgba="0.294118 0.180392 0.560784 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="8.4622e-17 3.33067e-16 1.76942e-16" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/forearm_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link forearm_link -->
+
+
+  <!-- Link wrist1_link -->
+  <link name="wrist1_link">
+    <inertial>
+      <origin xyz="8.41318e-17 -0.00149769 -0.02306" rpy="0 0 0"/>
+      <mass value="0.182387"/>
+      <inertia ixx="4.96843e-05" ixy="3.37872e-20" ixz="2.50108e-20" iyy="5.51546e-05" iyz="-2.74955e-06" izz="4.37886e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="1.04083e-16 4.08473e-17 1.11022e-16" rpy="3.14159 -3.28226e-16 3.20794e-16"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist1_link.stl"/>
+      </geometry>
+      <material name="wrist1_link_material">
+        <color rgba="0.294118 0.180392 0.560784 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="1.04083e-16 4.08473e-17 1.11022e-16" rpy="3.14159 -3.28226e-16 3.20794e-16"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist1_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link wrist1_link -->
+
+
+  <!-- Link wrist2_link -->
+  <link name="wrist2_link">
+    <inertial>
+      <origin xyz="-0.00251186 6.71599e-18 0.0190119" rpy="0 0 0"/>
+      <mass value="0.0859157"/>
+      <inertia ixx="1.77917e-05" ixy="1.82916e-19" ixz="-2.99993e-07" iyy="1.77246e-05" iyz="1.27323e-20" izz="1.1138e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="1.249e-16 0.0075 -0.001" rpy="-3.14159 -1.21316e-15 1.47004e-15"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist2_link.stl"/>
+      </geometry>
+      <material name="wrist2_link_material">
+        <color rgba="0.764706 0.545098 0.803922 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="1.249e-16 0.0075 -0.001" rpy="-3.14159 -1.21316e-15 1.47004e-15"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist2_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link wrist2_link -->
+
+
+  <!-- Link wrist3_tool_link -->
+  <link name="wrist3_tool_link">
+    <inertial>
+      <origin xyz="1.23254e-18 0.00173675 0.0180397" rpy="0 0 0"/>
+      <mass value="0.0818333"/>
+      <inertia ixx="1.58518e-05" ixy="1.1494e-19" ixz="4.04749e-20" iyy="1.58958e-05" iyz="2.99003e-07" izz="1.06276e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0075 0.029 -0.013" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist3_link.stl"/>
+      </geometry>
+      <material name="wrist3_link_material">
+        <color rgba="0.8 0.74902 0.913725 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0075 0.029 -0.013" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://gripperbot_description/assets/arm/wrist3_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- END Link wrist3_tool_link -->
+
+
+<!-- =======================================  JOINTS ============================================= -->
+
+ <!-- Joint from wrist2_link to wrist3_tool_link -->
+  <joint name="wrist2_joint" type="revolute">
+    <origin xyz="0.01375 2.45572e-17 0.028" rpy="-1.5708 7.43214e-16 -1.5708"/>
+    <parent link="wrist2_link"/>
+    <child link="wrist3_tool_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-2.00" upper="2.00"/>
+  </joint>
+
+  <!-- Joint from wrist1_link to wrist2_link -->
+  <joint name="wrist1_joint" type="continuous">
+    <origin xyz="8.32667e-17 4.82199e-17 -0.049" rpy="3.14159 -2.66993e-16 3.20794e-16"/>
+    <parent link="wrist1_link"/>
+    <child link="wrist2_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Joint from forearm_link to wrist1_link -->
+  <joint name="forearm_to_wrist_joint" type="fixed">
+    <origin xyz="8.31583e-17 -0.2685 0.0225" rpy="-1.5708 1.5708 0"/>
+    <parent link="forearm_link"/>
+    <child link="wrist1_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Joint from elbow_link to forearm_link -->
+  <joint name="elbow_joint" type="revolute">
+    <origin xyz="-0.019 0.00019993 -0.05625" rpy="1.5708 -1.72647e-17 -1.57079"/>
+    <parent link="elbow_link"/>
+    <child link="forearm_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-3" upper="3"/>
+  </joint>
+
+  <!-- Joint from upperarm_link to elbow_link -->
+  <joint name="upperarm_to_elbow_joint" type="fixed">
+    <origin xyz="-0.000118579 0.307 0.019" rpy="1.5708 -1.57079 0.000386251"/>
+    <parent link="upperarm_link"/>
+    <child link="elbow_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+  <!-- Joint from shoulder_link to upperarm_link -->
+  <joint name="shoulder_joint" type="revolute">
+    <origin xyz="-0.019 -6.52428e-18 -0.03625" rpy="-1.5708 1.07155e-19 -1.5708"/>
+    <parent link="shoulder_link"/>
+    <child link="upperarm_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100" lower="-1.5708" upper="1.5708"/>
+  </joint>
+
+  <!-- Joint from base_link to shoulder_link -->
+  <joint name="waist_joint" type="continuous">
+    <origin xyz="0 4.89859e-18 0.0495" rpy="3.14159 -0 0"/>
+    <parent link="base_link"/>
+    <child link="shoulder_link"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" velocity="100"/>
+  </joint>
+
+</robot>
