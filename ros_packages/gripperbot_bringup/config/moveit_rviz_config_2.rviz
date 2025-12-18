@@ -5,8 +5,10 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
+        - /MotionPlanning1/Planned Path1
+        - /MotionPlanning1/Planned Path1/Links1/wrist3_tool_link1
       Splitter Ratio: 0.5028985738754272
-    Tree Height: 385
+    Tree Height: 379
   - Class: rviz_common/Help
     Name: Help
   - Class: rviz_common/Views
@@ -37,6 +39,15 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: MarkerArray
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /move_gripperbot_node1
     - Acceleration_Scaling_Factor: 1
       Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
@@ -48,7 +59,7 @@ Visualization Manager:
       MoveIt_Planning_Attempts: 10
       MoveIt_Planning_Time: 5
       MoveIt_Use_Cartesian_Path: false
-      MoveIt_Use_Constraint_Aware_IK: false
+      MoveIt_Use_Constraint_Aware_IK: true
       MoveIt_Workspace:
         Center:
           X: 0
@@ -152,7 +163,7 @@ Visualization Manager:
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: arm
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -234,7 +245,7 @@ Visualization Manager:
             Show Axes: false
             Show Trail: false
             Value: true
-        Robot Alpha: 0.5
+        Robot Alpha: 1
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
@@ -257,25 +268,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2
+      Distance: 2.401973009109497
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.23356178402900696
-        Y: 0.18617397546768188
-        Z: 0.43038368225097656
+        X: -0.15792089700698853
+        Y: 0.09171570837497711
+        Z: 0.22318808734416962
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5
+      Pitch: 0.5050001740455627
       Target Frame: base_link
       Value: Orbit (rviz_default_plugins)
-      Yaw: 5.66018533706665
+      Yaw: 5.755177974700928
     Saved: ~
 Window Geometry:
   Displays:
@@ -289,11 +300,11 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000002b4000003f2fc0200000006fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb000000100044006900730070006c006100790073010000003f00000207000000cc00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000024c0000019b0000019600fffffffb0000000800480065006c0070000000029a0000006e0000006f00fffffffb0000000a005600690065007700730000000302000000ae000000a900fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006901000003ed000000440000004400ffffff00000482000003f200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002b4000003f2fc0200000006fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004400fffffffb000000100044006900730070006c006100790073010000003f00000201000000cc00fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000246000001a10000019600fffffffb0000000800480065006c0070000000029a0000006e0000006f00fffffffb0000000a005600690065007700730000000302000000ae000000a900fffffffb00000024005200760069007a00560069007300750061006c0054006f006f006c007300470075006901000003ed000000440000004400ffffff00000482000003f200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RvizVisualToolsGui:
     collapsed: false
   Views:
     collapsed: false
   Width: 1852
-  X: 5560
-  Y: 114
+  X: 5828
+  Y: 30

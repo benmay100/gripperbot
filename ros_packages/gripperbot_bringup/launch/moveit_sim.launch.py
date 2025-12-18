@@ -25,6 +25,7 @@ def generate_launch_description():
     
     # 1. Get the paths to the required packages
     pkg_gripperbot_moveit = get_package_share_directory('gripperbot_moveit')
+    pkg_gripperbot_bringup = get_package_share_directory('gripperbot_bringup')
 
     controllers_file = os.path.join(pkg_gripperbot_moveit, 'config', 'ros2_controllers.yaml')
 
@@ -39,7 +40,7 @@ def generate_launch_description():
     
     declare_rviz_config_file_cmd = DeclareLaunchArgument(
         'rviz_config_file',
-        default_value=PathJoinSubstitution([pkg_gripperbot_moveit, 'config', 'moveit_v2.rviz']),
+        default_value=PathJoinSubstitution([pkg_gripperbot_bringup, 'config', 'moveit_rviz_config_2.rviz']),
         description='Full path to the RViz config file.'
     )
 
